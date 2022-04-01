@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1>FORM ĐĂNG KÝ</h1>
+  <form class="form-main" [formGroup]="profileForm"  (ngSubmit)="onSubmit()">
+
+    <label class="form-label" for="chk" aria-hidden="true">User Name: </label>
+    <input id="first-name" type="text" formControlName="name" required>
+ 
+      <label class="form-label" for="chk" aria-hidden="true">Name: </label>
+      <input id="first-name" type="text" formControlName="name" required>
+  
+      <label class="form-label" for="last-name">Age: </label>
+      <input id="last-name" type="text" formControlName="age" required>
+ 
+      <label class="form-label" for="chk" aria-hidden="true">Gender: </label>
+      <input id="first-name" type="text" formControlName="name" required>
+ 
+      <label class="form-label" for="last-name">Password: </label>
+      <input id="last-name" type="text" formControlName="age" required>
+   
+     <label class="form-label" for="last-name">Password Again: </label>
+      <input id="last-name" type="text" formControlName="age" required>
+    <br>
+      <button class="bnt-submit" type="button" [disabled]="!profileForm.valid">Submit</button>
+  </form>
+</div>
+
+
