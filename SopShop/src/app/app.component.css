@@ -1,4 +1,4 @@
-.mainLink {
+.main-nav {
     background-color: #e4cfcb;
     width: 100%;
     left: 840px;
@@ -6,6 +6,32 @@
     color: white;
     font-family: "Times New Roman",serif;
     text-align: right;
-    
-    
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F2AB91;
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.register) {
+    background-color: #F2AB91;
+  }
+  
+  .register {
+    background-color: #04AA6D;
+    float: right;
+  }
+  

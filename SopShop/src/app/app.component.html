@@ -1,4 +1,21 @@
-<div class="mainLink">
+<div class="main-nav">
+  <ul>
+    <li>
+      <a class="home" [routerLink]="['/home']" routerLinkActive = "routerLinkActive">Trang chủ</a>
+    </li>
+    <li>
+      <a  class="about" [routerLink]="['/about']" routerLinkActive = "routerLinkActive">Giới thiệu</a>
+    </li>
+    <li class="register">
+      <a [routerLink]="['/register-form']" routerLinkActive = "routerLinkActive">Đăng ký</a>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<!-- <div class="mainLink">
   <a [routerLink]="['/home']" routerLinkActive = "routerLinkActive">Đi tới home</a>
   &nbsp;|
   <a [routerLink]="['/about']" routerLinkActive = "routerLinkActive">Đi tới about</a>
@@ -6,7 +23,7 @@
   <a [routerLink]="['/register-form']" routerLinkActive = "routerLinkActive">Đi tới form đăng ký</a>
   &nbsp;|
   
-</div>
+</div> -->
 <router-outlet></router-outlet>
 
 
