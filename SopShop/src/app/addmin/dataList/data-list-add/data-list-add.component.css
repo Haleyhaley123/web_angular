@@ -1,0 +1,64 @@
+/* css form thêm mới */
+.container-form {
+ 
+    color: white;
+    text-align: center;
+    width: 350px;
+	  height: 600px;
+    padding: 20px;
+	  background: #fa5030;
+	  overflow: hidden;	
+    border-radius: 10px;
+	  box-shadow: 5px 20px 50px #000;
+    margin: auto;
+}
+.form-label {
+    width: 200px;
+    height: 26px;
+    left: 22px;
+    right: 144px;
+    color: #fff;
+	font-size: large;
+	justify-content: left;
+	display: flex;
+	margin: 1px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+    
+}
+#chk{
+	display: none;
+}
+.input{
+	width: 250px;
+	height: 15px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 1px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+.bnt-submit{
+	width: 100px;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #085e21;
+}

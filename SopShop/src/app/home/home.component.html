@@ -58,7 +58,7 @@
 </nav>
 <br><br><br><br><br><br><br><br>
 <!-- table -->
-<div class="main-table">
+ <div class="main-table">
     <h3 class="header-table">DANH SÁCH</h3>
     <table class="table" id="table">
         <thead>
@@ -84,7 +84,7 @@
                 <td>{{list.age}}</td>
                 <td>{{list.department}}</td>
                 <td>{{list.birthday}}</td>
-                <td>{{list.phone}}</td>
+                <td>{{list.NumberPhone}}</td>
                 <td>
                     <a href="javascript:void(0)" class="btn" (click)="onDel(list.pK_IDList)">Del</a>
                 </td>
@@ -95,14 +95,14 @@
             
         </tbody>
     </table>
-</div>
+</div> 
 <br><br><br>
-<!-- form thêm mới và chỉnh sửa -->
+ <!-- form thêm mới và chỉnh sửa -->
 <div class="container-form">
     <h1>Thêm, sửa thông tin</h1>
     <form class="form-main" [formGroup]="addForm"  (ngSubmit)="onSubmit()">
   
-        <label class="form-label" for="id" aria-hidden="true">ID </label>
+        <label class="form-label" for="id" aria-hidden="true">ID: </label>
         <input class="input" id="id" type="text" formControlName="id" required>
    
         <label class="form-label" for="name" aria-hidden="true">Tên: </label>
@@ -126,4 +126,4 @@
       <br>
         <button class="bnt-submit" type="button" [disabled]="!addForm.valid">Submit</button>
     </form>
-  </div>
+  </div> 

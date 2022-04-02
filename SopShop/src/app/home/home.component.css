@@ -1,6 +1,10 @@
 
 
-
+.main-nav_header {
+  text-align: center;
+  color: #4CAF50;
+  font-size: xx-large;
+}
 .main-info_left {
     
     background: rgb(214, 214, 176);

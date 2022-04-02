@@ -6,7 +6,7 @@ export interface IListPeople {
     age: number;
     department : string;
     birthday: Date;
-    phone: string;
+    NumberPhone: string;
        
     //    constructor(
     //        id : string,
