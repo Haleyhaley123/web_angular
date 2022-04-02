@@ -1,1 +1,95 @@
-<p>home works!</p>
+<!-- navbar -->
+<nav class="main-nav">
+    <h2 class="main-nav_header">NHỮNG CHÚ MÈO ĐÁNG YÊU</h2>
+   <div class="main-nav_info">
+       <!-- div left -->
+       <div class="main-info_left">
+           <h3>Thông tin lựa chọn</h3>
+           <label for="">Chọn:</label>
+           <select class="main-info_select" name="" id="">
+               <option>Tất cả</option>
+               <option>Nhân viên</option>
+               <option>Giáo viên</option>
+               <option>Học sinh</option>
+           </select>
+           <br>
+           <button class="btn">Hiển thị</button>
+
+           <br><br> <br><br>
+           <label for="">Tìm kiếm:</label>
+           <input class="main-info_select" type="text">
+           <br> 
+           <button class="btn">Tìm</button>
+           <button class="btn">Thoát</button>
+       </div>
+<!-- div right -->
+       <div class="main-info_right">
+           <h3>Thông tin tài khoản</h3>
+           <div class="info-left">
+            <label for="">Tổng tất cả:</label>
+            <br>
+            <input type="text">
+            <br><br>
+            <label for="">Tổng nhân viên:</label>
+            <br>
+            <input type="text">
+            <br> <br>
+            <label for="">Tổng giáo viên:</label>
+            <br>
+            <input type="text">
+            <br> <br>
+            <label for="">Tổng học sinh:</label>
+            <br>
+            <input type="text">
+           </div>
+           <div class="info_right">
+            <label for="">Thông tin tài khoản:</label>
+            <br>
+            <input type="text">
+            <br>
+            <br><br><br>
+            <label for="">Thời gian đăng nhập:</label>
+            <br>
+            <input type="text">
+           </div>
+       </div>
+       
+   </div>
+</nav>
+
+<!-- table -->
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Giới tính</th>
+            <th>Tuổi</th>
+            <th>Phòng ban</th>
+            <th>Ngày sinh</th>
+            <th>Số điện thoại</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of lists; let i = index">
+            <td scope="row">{{i+1}}</td>
+            <td>{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <td>{{list.gender}}</td>
+            <td>{{list.age}}</td>
+            <td>{{list.department}}</td>
+            <td>{{list.phone}}</td>
+            <td>
+                <a href="javascript:void(0)" class="btn" (click)="onDel()">Del</a>
+            </td>
+            <td>
+                <a href="javascript:void(0)" class="btn" (click)="onEdit()">Edit</a>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+

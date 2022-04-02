@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IListPeople } from '../1.CommonModel/list-people';
+import { ServerHttpService } from '../Services/server-http.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  lists: IListPeople[]= [];
+  constructor(private _listPeopleService: ServerHttpService) { }
+  getAll() {
+    this._listPeopleService.getList().subscribe(res => {
+      this.lists = res, console.log(this.lists)
+    });
   }
+  ngOnInit(): void {
+    this.getAll();
+  }
+  onDel() {
 
+  }
+  onEdit() {
+    
+  }
 }
