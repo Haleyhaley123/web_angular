@@ -58,38 +58,43 @@
 </nav>
 
 <!-- table -->
-<table class="table" id="table">
-    <thead>
-        <tr>
-            <th>STT</th>
-            <th>ID</th>
-            <th>Tên</th>
-            <th>Giới tính</th>
-            <th>Tuổi</th>
-            <th>Phòng ban</th>
-            <th>Ngày sinh</th>
-            <th>Số điện thoại</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let list of lists; let i = index">
-            <td scope="row">{{i+1}}</td>
-            <td>{{list.id}}</td>
-            <td>{{list.name}}</td>
-            <td>{{list.gender}}</td>
-            <td>{{list.age}}</td>
-            <td>{{list.department}}</td>
-            <td>{{list.phone}}</td>
-            <td>
-                <a href="javascript:void(0)" class="btn" (click)="onDel()">Del</a>
-            </td>
-            <td>
-                <a href="javascript:void(0)" class="btn" (click)="onEdit()">Edit</a>
-            </td>
-        </tr>
-        
-    </tbody>
-</table>
+<div class="main-table">
+    <h3 class="header-table">DANH SÁCH</h3>
+    <table class="table" id="table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>ID</th>
+                <th>Tên</th>
+                <th>Giới tính</th>
+                <th>Tuổi</th>
+                <th>Phòng ban</th>
+                <th>Ngày sinh</th>
+                <th>Số điện thoại</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let list of lists; let i = index">
+                <td scope="row">{{i+1}}</td>
+                <td>{{list.id}}</td>
+                <td>{{list.name}}</td>
+                <td>{{list.gender}}</td>
+                <td>{{list.age}}</td>
+                <td>{{list.department}}</td>
+                <td>{{list.birthday}}</td>
+                <td>{{list.phone}}</td>
+                <td>
+                    <a href="javascript:void(0)" class="btn" (click)="onDel(list.pK_IDList)">Del</a>
+                </td>
+                <td>
+                    <a href="javascript:void(0)" class="btn" (click)="onEdit()">Edit</a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
 

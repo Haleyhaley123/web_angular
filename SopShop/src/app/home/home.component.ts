@@ -19,10 +19,16 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getAll();
   }
-  onDel() {
-
+  onDel(id: number) {
+    alert('Bạn có muốn xóa id' +id);
+    this._listPeopleService.deleteList(id).subscribe(res => {
+      this.getAll();
+    })
   }
   onEdit() {
-    
+    alert('Bạn có sửa');
+    this._listPeopleService.editData().subscribe(res => {
+      this.getAll();
+    })
   }
 }

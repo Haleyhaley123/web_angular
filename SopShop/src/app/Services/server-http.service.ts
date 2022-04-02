@@ -41,12 +41,17 @@ getList(): Observable<IListPeople[]> {
   }
 //add Data
     insertData(data:IListPeople[] ): Observable<IListPeople[]> {
-    return this.http.post<IListPeople[]>('https://localhost:44368/api/People/InsertData', data);
+    return this.http.post<IListPeople[]>('https://localhost:44368/api/People/InsertData', data)
   }
 //eidt data
+editData(): Observable<IListPeople[]> {
+  return this.http.get<IListPeople[]>('https://localhost:44368/api/People/EditData');
+}
+//get
 getbyId(id: string): Observable<IListPeople[]> {
   return this.http.get<IListPeople[]>('https://localhost:44368/api/People/GetPeople?id=' +id);
 }
+
 //delete data   
   deleteList(id: number): Observable<IListPeople[]> {
   return this.http.delete<IListPeople[]>('https://localhost:44368/api/People/DeleteData?id='+id);
