@@ -56,7 +56,7 @@
        
    </div>
 </nav>
-
+<br><br><br><br><br><br><br><br>
 <!-- table -->
 <div class="main-table">
     <h3 class="header-table">DANH SÁCH</h3>
@@ -96,5 +96,34 @@
         </tbody>
     </table>
 </div>
+<br><br><br>
+<!-- form thêm mới và chỉnh sửa -->
+<div class="container-form">
+    <h1>Thêm, sửa thông tin</h1>
+    <form class="form-main" [formGroup]="addForm"  (ngSubmit)="onSubmit()">
+  
+        <label class="form-label" for="id" aria-hidden="true">ID </label>
+        <input class="input" id="id" type="text" formControlName="id" required>
+   
+        <label class="form-label" for="name" aria-hidden="true">Tên: </label>
+        <input class="input" id="name" type="text" formControlName="name" required>
+    
+        <label class="form-label" for="gender">Giới tính: </label>
+        <input class="input" id="gender" type="text" formControlName="gender" required>
+   
+        <label class="form-label" for=" age" aria-hidden="true">Tuổi: </label>
+        <input class="input" id=" age" type="text" formControlName=" age" required>
+   
+        <label class="form-label" for=" department">Phòng ban: </label>
+        <input class="input" id=" department" type="text" formControlName="department" required>
 
-
+        <label class="form-label" for=" birthday">Ngày sinh: </label>
+        <input class="input" id=" birthday" type="text" formControlName=" birthday" required>
+   
+        <label class="form-label" for="phone" aria-hidden="true">Điện thoại: </label>
+        <input class="input" id="phone" type="text" formControlName="phone" required>
+  
+      <br>
+        <button class="bnt-submit" type="button" [disabled]="!addForm.valid">Submit</button>
+    </form>
+  </div>
